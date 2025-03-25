@@ -25,7 +25,7 @@ class SendMessageService extends AbstractSendMessageService
                         <request>
                             <auth>
                                 <login>%s</login>
-                                <password>$s</password>
+                                <password>%s</password>
                             </auth>
                             <message>
                                 <from>%s</from>
@@ -34,22 +34,22 @@ class SendMessageService extends AbstractSendMessageService
                             </message>
                         </request>';
             return sprintf($request, $this->config->login, $this->config->password, $this->config->name_sms, $this->message->text, $this->message->destination);
-        } else {
-            $request = '<?xml version="1.0" encoding="UTF-8"?>
-                        <request>
-                            <auth>
-                                <login>%s</login>
-                                <password>%s</password>
-                            </auth>
-                            <viber_text>
-                                <from>%s</from>
-                                <text>%s</text>
-                                <life_time>1440</life_time>
-                                <recipient>%s</recipient>
-                            </viber_text>
-                        </request>';
-            return sprintf($request, $this->config->login, $this->config->password, $this->config->name_viber, $this->message->text, $this->message->destination);
         }
+
+        $request = '<?xml version="1.0" encoding="UTF-8"?>
+                    <request>
+                        <auth>
+                            <login>%s</login>
+                            <password>%s</password>
+                        </auth>
+                        <viber_text>
+                            <from>%s</from>
+                            <text>%s</text>
+                            <life_time>1440</life_time>
+                            <recipient>%s</recipient>
+                        </viber_text>
+                    </request>';
+        return sprintf($request, $this->config->login, $this->config->password, $this->config->name_viber, $this->message->text, $this->message->destination);
     }
 
     /** @return mixed */
