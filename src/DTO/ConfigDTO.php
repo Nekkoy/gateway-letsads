@@ -13,34 +13,34 @@ class ConfigDTO extends AbstractConfigDTO
      * Логин
      * @var string
      */
-    public string $login;
+    public $login;
 
     /**
      * Пароль
      * @var string
      */
-    public string $password;
+    public $password;
 
     /**
      * Канал отправки сообщения: sms/viber
      * @var string
      */
-    public string $channel;
+    public $channel;
 
     /**
      * Имя при отправке через СМС
      * @var string
      */
-    public string $name_sms;
+    public $name_sms;
 
     /**
      * Имя при отправке через Viber
      * @var string
      */
-    public string $name_viber;
+    public $name_viber;
 
     /**
      * @var string
      */
-    public string $handler = \Nekkoy\GatewayLetsads\Services\SendMessageService::class;
+    public $handler = \Nekkoy\GatewayLetsads\Services\SendMessageService::class;
 }

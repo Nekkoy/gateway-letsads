@@ -2,7 +2,6 @@
 
 namespace Nekkoy\GatewayLetsads\Services;
 
-use Nekkoy\GatewayAbstract\DTO\ResponseDTO;
 use Nekkoy\GatewayAbstract\Services\AbstractSendMessageService;
 use Nekkoy\GatewayLetsads\DTO\ConfigDTO;
 
