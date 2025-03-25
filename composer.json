@@ -3,7 +3,7 @@
     "description": "SMS Gateway for LetsADS service",
     "homepage": "https://github.com/nekkoy/gateway-letsads",
     "type": "library",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "MIT",
     "keywords": ["nekkoy", "laravel", "letsads", "sms", "gateway"],
     "authors": [
